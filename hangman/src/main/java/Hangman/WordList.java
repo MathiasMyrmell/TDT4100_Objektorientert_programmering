@@ -12,8 +12,7 @@ public class WordList{
 
     
     public List<String> currentWords = new ArrayList<>();
-    //private String fileName = "minegenkode\\src\\main\\java\\Hangman\\files\\words.txt";
-    private String fileName = "C:\\Users\\mathi\\TDT4100\\students\\minegenkode\\src\\main\\java\\Hangman\\files\\highscores.txt";
+    private String fileName = "minegenkode\\src\\main\\java\\Hangman\\files\\words.txt";
     
     public WordList(){
         readFromFile(fileName);

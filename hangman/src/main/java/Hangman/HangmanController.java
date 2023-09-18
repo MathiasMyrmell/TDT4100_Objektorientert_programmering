@@ -26,9 +26,6 @@ public class HangmanController{
 
     @FXML void guess(){
         String guess = this.guess.getText();
-        // if(guess.length()<1){
-        //         infoText.setText("You guessed nothing");
-        //     }else 
             if(guess.length()!=game.getWord().length() && guess.length()>1){
                 infoText.setText("The length of your guess does not have the same lenght as the word you are trying to find, or is not a single letter");
             }else{
