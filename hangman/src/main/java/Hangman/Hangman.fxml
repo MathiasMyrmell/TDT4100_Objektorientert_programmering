@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.QuadCurve?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#clearText" prefHeight="563.0" prefWidth="719.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Hangman.HangmanController">
+   <children>
+      <Text layoutX="530.0" layoutY="411.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Guessed letters" />
+      <TextField fx:id="letterGuess" disable="true" layoutX="527.0" layoutY="226.0" onMouseClicked="#clearText" prefHeight="25.0" prefWidth="167.0" promptText="Your guess" />
+      <Circle fx:id="head" fill="#f2ff1f" layoutX="148.0" layoutY="84.0" radius="58.0" stroke="BLACK" strokeType="INSIDE" />
+      <Rectangle fx:id="body" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="136.0" layoutX="129.0" layoutY="131.0" stroke="BLACK" strokeType="INSIDE" width="38.0" />
+      <Rectangle fx:id="rightArm" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" layoutX="167.0" layoutY="174.0" stroke="BLACK" strokeType="INSIDE" width="99.0" />
+      <Rectangle fx:id="leftArm" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" layoutX="14.0" layoutY="174.0" stroke="BLACK" strokeType="INSIDE" width="116.0" />
+      <Rectangle fx:id="leftLeg" arcHeight="5.0" arcWidth="5.0" disable="true" fill="DODGERBLUE" height="116.0" layoutX="104.0" layoutY="240.0" stroke="BLACK" strokeType="INSIDE" width="25.0" />
+      <Rectangle fx:id="rightLeg" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="116.0" layoutX="166.0" layoutY="238.0" stroke="BLACK" strokeType="INSIDE" width="25.0" />
+      <QuadCurve fx:id="mouth" controlY="-63.0" endX="28.0" endY="-14.0" fill="#f2ff1f" layoutX="148.0" layoutY="132.0" startX="-33.0" startY="-14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" />
+      <Button fx:id="startNewGame" layoutX="530.0" layoutY="90.0" mnemonicParsing="false" onAction="#startNewGame" prefHeight="57.0" prefWidth="132.0" text="New game!" />
+      <TextArea fx:id="guessedLetters" layoutX="527.0" layoutY="425.0" prefHeight="101.0" prefWidth="183.0" />
+      <TextArea fx:id="progress" layoutX="41.0" layoutY="440.0" prefHeight="25.0" prefWidth="376.0" promptText="Your word">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </TextArea>
+      <Text fx:id="guessedLetter" layoutX="519.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="183.0" />
+      <Text fx:id="winnerText" layoutX="278.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="309.13671875">
+         <font>
+            <Font size="39.0" />
+         </font>
+      </Text>
+      <Text fx:id="attemptsText" layoutX="255.0" layoutY="359.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Circle fx:id="leftEye" layoutX="125.0" layoutY="63.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="rightEye" layoutX="166.0" layoutY="63.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+      <Text fx:id="score" layoutX="278.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="108.13671875" />
+      <Button fx:id="guess" disable="true" layoutX="527.0" layoutY="255.0" mnemonicParsing="false" onAction="#guess" prefHeight="25.0" prefWidth="99.0" text="Guess" />
+      <TextField fx:id="userName" layoutX="530.0" layoutY="51.0" prefHeight="25.0" prefWidth="132.0" promptText="Your name" />
+   </children>
+</AnchorPane>
